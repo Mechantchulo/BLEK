@@ -8,5 +8,8 @@ class Professional(db.Model):
     certification_file = db.Column(db.String(100), nullable=False)
     portfolio_images = db.Column(db.JSON)
     is_verified = db.Column(db.Boolean, default=False)
-    # Relationships
+
     user = db.relationship("User", back_populates="professional")
+
+    
+    
